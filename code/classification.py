@@ -250,7 +250,7 @@ full_result['LDA'] = LDA.predict(full_X)
 full_result['LDA_prob'] = LDA.predict_proba(full_X)[:,1]
 
 
-# K-Nearest Neigbors
+# K-Nearest Neighbors
 # =============================================================================
 # KNN is a completely non-parametric approach:
 # No assumptions are made about the shape of the decision boundary. Therefore,
@@ -299,7 +299,7 @@ full_result['RF'] = RF.predict(full_X)
 full_result['RF_prob'] = RF.predict_proba(full_X)[:,1]
 
 
-# Ada Boost (No assumptions on distribution of data, Handles colinearity better than LR, May not be good with small training data size)
+# AdaBoost (No assumptions on distribution of data, Handles colinearity better than LR, May not be good with small training data size)
 from sklearn.ensemble import AdaBoostClassifier
 Ada = AdaBoostClassifier(random_state=0).fit(train_X, train_Y)
 full_result['Ada'] = Ada.predict(full_X)
